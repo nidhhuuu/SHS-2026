@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Foodie</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="cart.html">Cart</a>
+<a href="login.html">Login</a>
+</nav>
+</header>
+
+<h2>Your Cart</h2>
+<div id="cart-items"></div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const cartDiv = document.getElementById("cart-items");
+let total = 0;
+
+function removeItem(index){
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
+}
+
+cart.forEach((item, index) => {
+  cartDiv.innerHTML += `
+    <p>
+      ${item.name} - ₹${item.price}
+      <button onclick="removeItem(${index})">Remove</button>
+    </p>
+  `;
+  total += Number(item.price);
+});
+
+cartDiv.innerHTML += `<h3>Total: ₹${total}</h3>`;
+</script>

@@ -8,28 +8,30 @@
 <body>
 
 <header>
-    <h1>Foodie</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">Cart</a>
-        <a href="#">Login</a>
-        <input type="text" id="search" placeholder="Search for food...">
-        <select>
-  <option>Hyderabad</option>
-  <option>Warangal</option>
-  <option>Siddipet</option>
-</select>
-    </nav>
-</header>
-⚙ Settings
-  <div class="dropdown">
-    <p>Profile</p>
-    <p>Orders</p>
-    <p>Logout</p>
-  </div>
-</div>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
 
+    <input type="text" id="search" placeholder="Search for food...">
+
+    <select>
+        <option>Hyderabad</option>
+        <option>Warangal</option>
+        <option>Siddipet</option>
+    </select>
+
+    <div class="settings">
+        <button onclick="toggleSettings()">⚙</button>
+        <div class="dropdown">
+            <p>Profile</p>
+            <p>Orders</p>
+            <p>Logout</p>
+        </div>
+    </div>
+</nav>
+</header>
 <section class="hero">
     <h2>Delicious Food Delivered To Your Door</h2>
     <button>Order Now</button>
@@ -37,6 +39,9 @@
 
 <section class="menu">
 <h2>Popular Dishes</h2>
+<div class="food-container"></div>
+<h2>Cart Items</h2>
+<div id="cart-list"></div>
 
 <div class="food-container">
 
@@ -44,35 +49,35 @@
 <img src="images/pizza.jpg">
 <h3>Pizza</h3>
 <p>₹199</p>
-<button onclick="addToCart(199)">Add</button>
+<button onclick="addToCart('pizza',199)">Add</button>
 </div>
 
 <div class="food-card">
 <img src="images/burger.jpg">
 <h3>Burger</h3>
 <p>₹149</p>
-<button onclick="addToCart(149)">Add</button>
+<button onclick="addToCart('burger',149)">Add</button>
 </div>
 
 <div class="food-card">
 <img src="images/biryani.jpg">
 <h3>Biryani</h3>
 <p>₹249</p>
-<button onclick="addToCart(249)">Add</button>
+<button onclick="addToCart('biryani',249)">Add</button>
 </div>
 
 <div class="food-card">
 <img src="images/pasta.jpg">
 <h3>Pasta</h3>
 <p>₹179</p>
-<button onclick="addToCart(179)">Add</button>
+<button onclick="addToCart('pasta',179)">Add</button>
 </div>
 
 <div class="food-card">
 <img src="images/dessert.jpg">
 <h3>Dessert</h3>
 <p>₹120</p>
-<button onclick="addToCart(120)">Add</button>
+<button onclick="addToCart('dessert',120)">Add</button>
 </div>
 
 </div>
@@ -81,5 +86,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-<div class="settings">
-  
