@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #fff8f0;
+}
+
+header {
+    background: orange;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.menu {
+    text-align: center;
+    padding: 20px;
+}
+
+.food-card {
+    display: inline-block;
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+.food-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.food-card {
+ background: white;
+ padding: 15px;
+ margin: 15px;
+ width: 220px;
+ border-radius: 10px;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+ transition: 0.3s;
+ text-align: center;
+}
+
+.food-card:hover {
+ transform: scale(1.05);
+}
+
+.food-card img {
+ width: 100%;
+ border-radius: 10px;
+}
+
+.food-card button {
+ background: orange;
+ border: none;
+ padding: 8px 15px;
+ color: white;
+ border-radius: 5px;
+}
+header input {
+ padding:8px;
+ border-radius:5px;
+ border:none;
+}
+.settings {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+}
+
+.dropdown {
+ display: none;
+ position: absolute;
+ background: white;
+ color: black;
+ padding: 10px;
+ box-shadow: 0 0 5px gray;
+}
+
+.settings:hover .dropdown {
+ display: block;
+}
+header {
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:15px;
+}
+.food-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
